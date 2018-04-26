@@ -1,0 +1,315 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{ADCCF86E-CC32-472D-9B1E-48243CFDAC97}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Migrate.Clients</RootNamespace>
+    <AssemblyName>Migrate.Clients</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Contrains\ContraintsOperation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contrains\ContraintsOperation.Designer.cs">
+      <DependentUpon>ContraintsOperation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteData\DeteleDateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteData\DeteleDateForm.Designer.cs">
+      <DependentUpon>DeteleDateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Export\ExDestConnectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Export\ExDestConnectForm.Designer.cs">
+      <DependentUpon>ExDestConnectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Export\ExExecutingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Export\ExExecutingForm.Designer.cs">
+      <DependentUpon>ExExecutingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Export\ExScheduleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Export\ExScheduleForm.Designer.cs">
+      <DependentUpon>ExScheduleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Export\ExSelectTableForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Export\ExSelectTableForm.Designer.cs">
+      <DependentUpon>ExSelectTableForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Import\ImDestConnectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Import\ImDestConnectForm.Designer.cs">
+      <DependentUpon>ImDestConnectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Import\ImExecutingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Import\ImExecutingForm.Designer.cs">
+      <DependentUpon>ImExecutingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Import\ImScheduleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Import\ImScheduleForm.Designer.cs">
+      <DependentUpon>ImScheduleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Import\ImSelectFileForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Import\ImSelectFileForm.Designer.cs">
+      <DependentUpon>ImSelectFileForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrate\SelectTableForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Migrate\SelectTableForm.Designer.cs">
+      <DependentUpon>SelectTableForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrate\DestConnectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Migrate\DestConnectForm.Designer.cs">
+      <DependentUpon>DestConnectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrate\ExecutingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Migrate\ExecutingForm.Designer.cs">
+      <DependentUpon>ExecutingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrate\ScheduleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Migrate\ScheduleForm.Designer.cs">
+      <DependentUpon>ScheduleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\AuthorizeRoleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\AuthorizeRoleForm.designer.cs">
+      <DependentUpon>AuthorizeRoleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TableSpace\ChooseTablespaceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TableSpace\ChooseTablespaceForm.designer.cs">
+      <DependentUpon>ChooseTablespaceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Context.cs" />
+    <Compile Include="Table\CreateTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Table\CreateTable.Designer.cs">
+      <DependentUpon>CreateTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TableSpace\CreateTableSpaceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TableSpace\CreateTableSpaceForm.designer.cs">
+      <DependentUpon>CreateTableSpaceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\CreateUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\CreateUserForm.designer.cs">
+      <DependentUpon>CreateUserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TableSpace\DeteleTableSpaceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TableSpace\DeteleTableSpaceForm.Designer.cs">
+      <DependentUpon>DeteleTableSpaceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\DeteleUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\DeteleUserForm.Designer.cs">
+      <DependentUpon>DeteleUserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\MainForm.designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteData\OperationTableForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteData\OperationTableForm.designer.cs">
+      <DependentUpon>OperationTableForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Contrains\ContraintsOperation.resx">
+      <DependentUpon>ContraintsOperation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteData\DeteleDateForm.resx">
+      <DependentUpon>DeteleDateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Export\ExDestConnectForm.resx">
+      <DependentUpon>ExDestConnectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Export\ExExecutingForm.resx">
+      <DependentUpon>ExExecutingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Export\ExScheduleForm.resx">
+      <DependentUpon>ExScheduleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Export\ExSelectTableForm.resx">
+      <DependentUpon>ExSelectTableForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Import\ImDestConnectForm.resx">
+      <DependentUpon>ImDestConnectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Import\ImExecutingForm.resx">
+      <DependentUpon>ImExecutingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Import\ImScheduleForm.resx">
+      <DependentUpon>ImScheduleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Import\ImSelectFileForm.resx">
+      <DependentUpon>ImSelectFileForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrate\DestConnectForm.resx">
+      <DependentUpon>DestConnectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrate\ExecutingForm.resx">
+      <DependentUpon>ExecutingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrate\ScheduleForm.resx">
+      <DependentUpon>ScheduleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrate\SelectTableForm.resx">
+      <DependentUpon>SelectTableForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\AuthorizeRoleForm.resx">
+      <DependentUpon>AuthorizeRoleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TableSpace\ChooseTablespaceForm.resx">
+      <DependentUpon>ChooseTablespaceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Table\CreateTable.resx">
+      <DependentUpon>CreateTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TableSpace\CreateTableSpaceForm.resx">
+      <DependentUpon>CreateTableSpaceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\CreateUserForm.resx">
+      <DependentUpon>CreateUserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TableSpace\DeteleTableSpaceForm.resx">
+      <DependentUpon>DeteleTableSpaceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\DeteleUserForm.resx">
+      <DependentUpon>DeteleUserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteData\OperationTableForm.resx">
+      <DependentUpon>OperationTableForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\DataSources\Migrate.Application.Model.TableProfile.datasource" />
+    <None Include="Properties\DataSources\Migrate.Domain.Model.Constraint.datasource" />
+    <None Include="Properties\DataSources\Migrate.Domain.Model.Table.datasource" />
+    <None Include="Properties\DataSources\Migrate.Domain.Model.Tablespace.datasource" />
+    <None Include="Properties\DataSources\Migrate.Domain.Model.User.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Migrate.Application\Migrate.Application.csproj">
+      <Project>{1898c22e-5cd8-4bad-8317-86bde845f1f8}</Project>
+      <Name>Migrate.Application</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Migrate.Domain\Migrate.Domain.csproj">
+      <Project>{71cbd222-d285-4b90-9c0e-ba2aefa59627}</Project>
+      <Name>Migrate.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
